@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--meta charset link-->
+    <meta charset="utf-8">
+    <!--my bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <!--my title-->
+      <title>GoogleMap</title>
+      <link rel="stylesheet"href="css/googlemap.css">
+      <!--my script links-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   </head>
+  <body>
+    <!--my heading-->
+    <h1>Neighbourhood Map</h1>
+    <!--map that I required division-->
+    <div id="googlemap"></div>
+    <!--for the search bar division-->
+    <div class="iden">
+      <div class="find">
+        <form class="navbar-form " role="search">
+        <input class="searchbar" type="search" name="search" placeholder="Find " data-bind="value: findplace, valueUpdate: 'keyup'">
+        </form>  
+      </div>
+      <div id="searchlist">
+      <main class="container-fluid">
+        <div class="row">  
+              <div class="list-group" data-bind="foreach: placelist">
+                  <a href="#" class="list-group-item" data-bind="text: heading, click: show"></a>
+              </div>
+        </div>
+      </main>
+     </div>
+    </div>
+    <!--my knockout and js file links-->
+    <script src="lib/knockout.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places,drawing,geometry&key=AIzaSyB2qY4XN6IXlutSxtze5uURDvDioY0d_vU&callback=map" onerror="googleMapsError()"></script>
+  </body>
+  </html>

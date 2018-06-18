@@ -1,0 +1,32 @@
+#googlemap{
+    height:500px;
+    width:75%;
+}
+h1{
+    color:darkorchid;
+    background-color:white;
+    font-family:sans-serif;
+    text-align:center;
+}
+@media screen and (min-width:300px) and (max-width:500px){
+    #googlemap{
+        width:50%;
+    }
+    .iden{
+        width:45%;
+    }
+}
+.find{
+    width:25%;
+    height:50px;
+    float:right;
+    margin-top:-500px;
+    border: 2px solid darkorchid;
+}
+#searchlist{
+    width:25%;
+    height:50px;
+    margin-top:-450px;
+    float:right;
+}
+
